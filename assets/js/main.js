@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const apiURL = 'https://restcountries.com/v3.1/all';
     let countries = [];
     let currentIndex = 0;
@@ -9,11 +9,11 @@ $(document).ready(function() {
     $.ajax({
         url: apiURL,
         method: 'GET',
-        success: function(data) {
+        success: function (data) {
             countries = data;
             displayCountries();
         },
-        error: function() {
+        error: function () {
             $('#countryList').html('<p class="text-danger">Failed to load data. Please try again later.</p>');
         }
     });
@@ -43,7 +43,7 @@ $(document).ready(function() {
     }
 
     // Infinite scroll
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if (!isLoading && $(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
             if (currentIndex < countries.length) {
                 $('#loading').show();
