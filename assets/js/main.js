@@ -47,7 +47,7 @@ $(document).ready(function () {
         if (!isLoading && $(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
             if (currentIndex < countries.length) {
                 $('#loading').show();
-                setTimeout(displayCountries, 500);
+                setTimeout(displayCountries, 600);
             }
         }
     });
