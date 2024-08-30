@@ -30,7 +30,7 @@ $(document).ready(function() {
                         <img src="${country.flags.png}" class="card-img-top" alt="Flag of ${country.name.common}">
                         <div class="card-body">
                             <h5 class="card-title">${country.name.common}</h5>
-                            <a class="btn btn-primary" href="/country.html?countryName=${country.name.common}">Details</a>
+                            <a class="btn btn-primary" href="/decent/country.html?countryName=${country.name.common}">Details</a>
                         </div>
                     </div>
                 </div>
