@@ -64,20 +64,14 @@ gulp.task("scripts", function () {
 });
 
 gulp.task("browser-sync", function () {
-  //browserSync.init({
-  //	server: {
-  //		baseDir: 'build'
-  //	},
-  //	notify: false
-  //})
-  browserSync.init({
-    proxy: "localhost/PrepMyPapers",
-    //server: {
-    //	baseDir: "./"
-    //},
-    //proxy: "localhost:3000/PrepMyPapers",
-    browser: "google chrome",
-  });
+    browserSync.init({
+        server: {
+            baseDir: "./",
+            index: "api.html"
+        },
+        port: 9000,
+        browser: "google chrome",
+    });
 });
 
 gulp.task("watch", function () {
